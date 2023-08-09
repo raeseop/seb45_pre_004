@@ -5,6 +5,7 @@ import Login from "./pages/LoginPage";
 import Signup from "./pages/SignupPage";
 import QnAWritePage from "./pages/QnAWritePage";
 import QnADetailPage from "./pages/QnADetailPage";
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path="/write" element={<QnAWritePage />} />
 				<Route path="/detail" element={<QnADetailPage />} />
 			</Routes>
+			<Footer/>
 		</BrowserRouter>
 	);
 }

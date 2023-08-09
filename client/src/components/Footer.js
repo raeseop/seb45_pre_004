@@ -1,4 +1,4 @@
-import logo from "./assets/images/githubLogo.png";
+import logo from "../assets/images/githubLogo.png";
 import { styled } from "styled-components";
 
 const GithubLogo = styled.a`
