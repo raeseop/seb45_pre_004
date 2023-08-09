@@ -1,26 +1,37 @@
 import logo from "../assets/images/githubLogo.png";
 import { styled } from "styled-components";
+import tokens from '../styles/tokens.json'
 
-const GithubLogo = styled.a`
-  margin: 1rem;
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-`;
+const { lightGreyColor, bodyText } = tokens.global;
 
-const Wrapper = styled.div`
-  margin: 1rem;
+const Wrapper = styled.footer`
+  width: 100%;
+  padding: 25px 20px;
+  background-color: ${lightGreyColor.value};
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-size: ${bodyText.value}px;
 `;
-
+const GithubHref = styled.a`
+  margin: 1rem 1rem 0 0;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
 `;
+const GithubLogoIcon = styled.img`
+  object-fit: contain;
+  width: 25px;
+  margin-right: 7px;
+`
 
 export default function Footer() {
   return (
@@ -30,30 +41,30 @@ export default function Footer() {
         licensed under CC BY-SA.
       </div>
       <LogoWrapper>
-        <GithubLogo href="https://github.com/raeseop">
-          <img src={logo} alt="githubLogo" />
+        <GithubHref href="https://github.com/raeseop">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           홍래섭
-        </GithubLogo>
-        <GithubLogo href="https://github.com/IncheonLee">
-          <img src={logo} alt="githubLogo" />
+        </GithubHref>
+        <GithubHref href="https://github.com/IncheonLee">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           이준석
-        </GithubLogo>
-        <GithubLogo href="https://github.com/kimsihyuong">
-          <img src={logo} alt="githubLogo" />
+        </GithubHref>
+        <GithubHref href="https://github.com/kimsihyuong">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           김시형
-        </GithubLogo>
-        <GithubLogo href="https://github.com/3kiein">
-          <img src={logo} alt="githubLogo" />
+        </GithubHref>
+        <GithubHref href="https://github.com/3kiein">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           김세민
-        </GithubLogo>
-        <GithubLogo href="https://github.com/HyerimKimm">
-          <img src={logo} alt="githubLogo" />
+        </GithubHref>
+        <GithubHref href="https://github.com/HyerimKimm">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           김혜림
-        </GithubLogo>
-        <GithubLogo href="https://github.com/HelloWorldDogs223">
-          <img src={logo} alt="githubLogo" />
+        </GithubHref>
+        <GithubHref href="https://github.com/HelloWorldDogs223">
+          <GithubLogoIcon src={logo} alt="githubLogo" />
           이용혁
-        </GithubLogo>
+        </GithubHref>
       </LogoWrapper>
     </Wrapper>
   );
