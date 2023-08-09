@@ -1,5 +1,6 @@
 import backgroundImg from "../assets/images/headerImage.png";
 import logoImg from "../assets/images/logoImage.png";
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Background = styled.header`
@@ -14,6 +15,13 @@ const Background = styled.header`
 	justify-content: center;
 	color: white;
 	text-align: center;
+
+	a,
+	a:visited,
+	a:active {
+		outline: none;
+		text-decoration: none;
+	}
 `;
 
 const Title = styled.h1`
@@ -25,10 +33,11 @@ const Title = styled.h1`
 export default function Header() {
 	return (
 		<Background>
-			<div>header</div>
-			<img src={logoImg} alt="logo" />
-			<br />
-			<Title>STACK UNDERFLOW</Title>
+			<Link to="/">
+				<img src={logoImg} alt="logo" />
+				<br />
+				<Title>STACK UNDERFLOW</Title>
+			</Link>
 		</Background>
 	);
 }
