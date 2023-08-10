@@ -30,12 +30,16 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 	justify-content: center;
 
+	background-color: ${(props) =>
+		props.isLoginPage
+			? "transparent"
+			: "	background: rgba(255, 255, 255, 0.5);"};
 	border-radius: 20px;
-	background: rgba(255, 255, 255, 0.5);
+
 	position: relative;
 `;
 
- export const Title = styled.h1`
+export const Title = styled.h1`
 	font-family: "Jolly Lodger";
 	font-size: 32px;
 	color: #0567c2;
