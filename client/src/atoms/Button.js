@@ -18,8 +18,46 @@ export const RegularButtonDesign = styled.button`
   height: 70px;
 `;
 
-const Button = ({ color, text }) => (
-  <RegularButtonDesign color={color}>{text}</RegularButtonDesign>
-);
+export const SmallCircleButtonDesign = styled.button`
+  border-radius: 50%;
+  border: 0;
+  font-size: ${tokens.global.smallHeading.value}px;
+  color: ${tokens.global.whiteColor.value};
+  box-shadow: ${tokens.global.regularShadow.value.x}px
+    ${tokens.global.regularShadow.value.y}px
+    ${tokens.global.regularShadow.value.blur}px
+    ${tokens.global.regularShadow.value.spread}px
+    ${tokens.global.regularShadow.value.color};
+
+  background: ${(props) => props.color || `${tokens.global.mainColor.value}`};
+  width: 80px;
+  height: 80px;
+`;
+
+export const SmallButtonDesign = styled.button`
+  border-radius: ${tokens.global.regularRadius.value}px;
+  border: 0;
+  font-size: ${tokens.global.smallHeading.value}px;
+  color: ${tokens.global.whiteColor.value};
+  box-shadow: ${tokens.global.regularShadow.value.x}px
+    ${tokens.global.regularShadow.value.y}px
+    ${tokens.global.regularShadow.value.blur}px
+    ${tokens.global.regularShadow.value.spread}px
+    ${tokens.global.regularShadow.value.color};
+
+  background: ${(props) => props.color || `${tokens.global.mainColor.value}`};
+  width: 146px;
+  height: 58px;
+`;
+
+const Button = ({ color, text }) => {
+  return (
+    <>
+      <RegularButtonDesign color={color}>{text}</RegularButtonDesign>
+      <SmallCircleButtonDesign>{text}</SmallCircleButtonDesign>
+      <SmallButtonDesign>{text}</SmallButtonDesign>
+    </>
+  );
+};
 
 export default Button;
