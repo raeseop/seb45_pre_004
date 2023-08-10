@@ -19,6 +19,8 @@ const TextP = styled(QuestionP)`
   padding: 10px;
 `;
 
+// &nbsp; => HTML에서 띄어쓰기를 구현하는 방법 => 문단 구분을 위해 사용함
+
 const QnAWritePage = () => {
   return (
     <div>
@@ -26,19 +28,15 @@ const QnAWritePage = () => {
       <div>
         <TextP>
           좋은 질문을 작성하는 방법
-          <br /> You’re ready to ask a programming-related question and this
-          form will help guide you through the process. <br />
-          Looking to ask a non-programming question? See the topics here to find
-          a relevant site.
+          <br /> &nbsp; 여러분은 프로그래밍과 관련된 질문을 할 준비가
+          되셨습니다. 아래 폼을 작성해보세요 <br />
           <br />
-          Steps <br />
-          Summarize your problem in a one-line title.
-          <br /> Describe your problem in more detail. <br />
-          Describe what you tried and what you expected to happen.
+          단계 <br />
+          &nbsp;여러분의 문제를 제목 한 줄로 표현해보세요.
+          <br /> &nbsp;더 구체적이게 여러분의 문제를 묘사해보세요. <br />
+          &nbsp;무엇을 했고 무엇을 기대했는지 작성하세요.
           <br />
-          Add “tags” which help surface your question to members of the
-          community. <br />
-          Review your question and post it to the site.
+          &nbsp;여러분의 질문을 다시 한번 검토한 후에 제출해주세요!
         </TextP>
       </div>
       <Form />
