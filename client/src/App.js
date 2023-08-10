@@ -9,11 +9,18 @@ import QnADetailPage from "./pages/QnADetailPage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Navigator from "./components/Navigator";
+import { useSelector } from "react-redux";
+
 
 function App() {
+	const isLogin = useSelector((state)=>state.authReducer);
+
 	return (
 		<BrowserRouter>
 			<Header />
+			{
+				isLogin?'isLogin: true':'isLogin : false'
+			}
 			<Routes>
 				<Route path="/" element={<Main />} />
 				<Route path="/login" element={<Login />} />
