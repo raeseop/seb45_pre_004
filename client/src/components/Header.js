@@ -4,7 +4,14 @@ import logoImg from "../assets/images/logoImage.png";
 import tokens from "../styles/tokens.json";
 import { SmallButtonDesign as Button } from "../atoms/Button";
 import { ColorGradBlue as Gradient } from "../atoms/Button";
-import { Background, Wrapper, Title, Buttons, LogoLink, LogoImg } from "../styles/header";
+import {
+	Background,
+	Wrapper,
+	Title,
+	Buttons,
+	LogoLink,
+	LogoImg,
+} from "../styles/header";
 
 export default function Header() {
 	const location = useLocation();
@@ -23,7 +30,7 @@ export default function Header() {
 				{!isLoginPage && (
 					<Buttons>
 						{isLoggedIn ? (
-							<LogoLink to="/logout">
+							<LogoLink to="/">
 								<Button color={tokens.global.whiteColor.value}>
 									<Gradient>로그아웃</Gradient>
 								</Button>
