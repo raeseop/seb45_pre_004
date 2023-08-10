@@ -37,6 +37,11 @@ export const SmallButtonDesign = styled(RegularButtonDesign)`
 `;
 
 export const TextButtonDesign = styled.button`
+	background-color: transparent;
+	border-style: none;
+	padding: 10px 20px;
+	font-size: ${tokens.global.bodyText}px;
+	cursor: pointer;
 `
 
 export const ColorGradBlue = styled.p`
@@ -44,6 +49,7 @@ export const ColorGradBlue = styled.p`
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
+	color: black
 `;
 
 const Button = ({ color, text }) => {
@@ -58,6 +64,7 @@ const Button = ({ color, text }) => {
 			<SmallButtonDesign>
 				<ColorGradBlue>{text}</ColorGradBlue>
 			</SmallButtonDesign>
+			<TextButtonDesign>{text}</TextButtonDesign>
 		</div>
 	);
 };
