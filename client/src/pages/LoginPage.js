@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { login } from "../store/actions";
+import { login } from "../redux/actions/authAction";
 import { LoginInputBottomDesign, LoginInputTopDesign } from "../atoms/Input";
 import tokens from '../styles/tokens.json'
 import { TextButtonDesign } from "../atoms/Button";
@@ -22,7 +22,7 @@ const LoginPage = () => {
 				<LoginTitle>로그인</LoginTitle>
 				<LoginInputTopDesign type='text'/>
 				<LoginInputBottomDesign type='password'/>
-				<LoginButton color={globalTokens.pointColor.value}>로그인</LoginButton>
+				<LoginButton color={globalTokens.pointColor.value} onClick={handleLogin}>로그인</LoginButton>
 				<TextButtonDesign>회원가입</TextButtonDesign>
 			</LoginContainer>
 		</LoginPageContainer>
