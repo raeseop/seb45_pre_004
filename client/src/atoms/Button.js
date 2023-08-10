@@ -6,6 +6,7 @@ export const RegularButtonDesign = styled.button`
   border-radius: ${tokens.global.regularRadius.value}px;
   border: 0;
   font-size: ${tokens.global.smallHeading.value}px;
+  font-weight: ${tokens.global.bold.value};
   color: ${tokens.global.whiteColor.value};
   box-shadow: ${tokens.global.regularShadow.value.x}px
     ${tokens.global.regularShadow.value.y}px
@@ -35,11 +36,20 @@ export const SmallButtonDesign = styled(RegularButtonDesign)`
 	font-size: ${tokens.global.smallHeading.value}px;
 `;
 
+export const TextButtonDesign = styled.button`
+	background-color: transparent;
+	border-style: none;
+	padding: 10px 20px;
+	font-size: ${tokens.global.bodyText}px;
+	cursor: pointer;
+`
+
 export const ColorGradBlue = styled.p`
 	background: linear-gradient(to right top, #00e0ff, #006c7a);
 	color: transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
+	color: black
 `;
 
 const Button = ({ color, text }) => {
@@ -54,6 +64,7 @@ const Button = ({ color, text }) => {
 			<SmallButtonDesign>
 				<ColorGradBlue>{text}</ColorGradBlue>
 			</SmallButtonDesign>
+			<TextButtonDesign>{text}</TextButtonDesign>
 		</div>
 	);
 };
