@@ -21,7 +21,8 @@ export const RegularButtonDesign = styled.button`
     cursor: pointer;
     background-color: ${(props) =>
       props.hover || `${tokens.global.dartColor.value}`};
-  }
+	}
+
 `;
 
 export const SmallCircleButtonDesign = styled(RegularButtonDesign)`
@@ -46,8 +47,9 @@ export const TextButtonDesign = styled(Link)`
 	font-size: ${tokens.global.bodyText}px;
 	cursor: pointer;
 
-	&:hover {
+	&:hover{
 		color: ${tokens.global.lightGreyColor.value};
+		transition: 300ms;
 	}
 `
 
