@@ -1,3 +1,4 @@
+import DateCalculator from "./DateDistance";
 import {
 	Wrapper,
 	Current,
@@ -7,6 +8,8 @@ import {
 } from "../styles/question";
 
 export default function Question({ item }) {
+	const inputDate = "2023-08-08T09:00:00.000Z"; // 예시: YYYY-MM-DDTHH:mm:ss.SSSZ
+
 	return (
 		<>
 			<Wrapper>
@@ -28,11 +31,11 @@ export default function Question({ item }) {
 						</div>
 					</Contents>
 					<Info>
-						<div>Nanda Y {/* item.author */}</div>
-						<div>
-							-<div>21 {/* item.asked.length */} asked</div>
-							<div>58 secs ago</div>
-						</div>
+						<span>Nanda Y {/* item.author */}</span>
+						<section style={{ display: "flex" }}>
+							<div>- 21 {/* item.asked.length */} </div>
+							<DateCalculator inputDate={inputDate} /* item.createdAt */ />
+						</section>
 					</Info>
 				</Container>
 			</Wrapper>

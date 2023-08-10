@@ -4,8 +4,13 @@ import Question from "../components/Question";
 
 const MainPage = () => {
 	return (
-		<div style={{ display: "flex" }}>
-			This is MainPage.
+		<div
+			style={{
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+			}}
+		>
 			<Question />
 		</div>
 	);
