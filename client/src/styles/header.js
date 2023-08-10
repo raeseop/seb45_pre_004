@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import tokens from '../styles/tokens.json'
+
+const globalTokens = tokens.global;
 
 export const Background = styled.header`
 	width: 100%;
@@ -7,13 +11,6 @@ export const Background = styled.header`
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-
-	a,
-	a:visited,
-	a:active {
-		outline: none;
-		text-decoration: none;
-	}
 `;
 
 export const Wrapper = styled.div`
@@ -23,7 +20,7 @@ export const Wrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
+	align-items: center;
 	background-color: ${(props) =>
 		props.isLoginPage
 			? "transparent"
@@ -33,6 +30,14 @@ export const Wrapper = styled.div`
 	position: relative;
 `;
 
+export const LogoLink = styled(Link)`
+	text-decoration: none;
+	color: ${globalTokens.blackColor.value};
+`
+export const LogoImg = styled.img`
+	margin-top: 10px;
+	max-width: 70px;
+`
 export const Title = styled.h1`
 	font-family: "Jolly Lodger";
 	font-size: 32px;
@@ -42,7 +47,6 @@ export const Title = styled.h1`
 export const Buttons = styled.section`
 	position: absolute;
 	right: 0;
-
 	display: flex;
 	flex-direction: column;
 	gap: 10px;

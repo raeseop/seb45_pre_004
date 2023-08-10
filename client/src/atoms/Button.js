@@ -30,8 +30,9 @@ export const SmallCircleButtonDesign = styled(RegularButtonDesign)`
 
 export const SmallButtonDesign = styled(RegularButtonDesign)`
 	border-radius: ${tokens.global.regularRadius.value}px;
-	width: 146px;
-	height: 58px;
+	width: 120px;
+	height: 40px;
+	font-size: ${tokens.global.smallHeading.value}px;
 `;
 
 export const ColorGradBlue = styled.p`

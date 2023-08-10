@@ -4,7 +4,7 @@ import logoImg from "../assets/images/logoImage.png";
 import tokens from "../styles/tokens.json";
 import { SmallButtonDesign as Button } from "../atoms/Button";
 import { ColorGradBlue as Gradient } from "../atoms/Button";
-import { Background, Wrapper, Title, Buttons } from "../styles/header";
+import { Background, Wrapper, Title, Buttons, LogoLink, LogoImg } from "../styles/header";
 
 export default function Header() {
 	const location = useLocation();
@@ -15,19 +15,19 @@ export default function Header() {
 	return (
 		<Background>
 			<Wrapper>
-				<Link to="/">
-					<img src={logoImg} alt="logo" />
+				<LogoLink to="/">
+					<LogoImg src={logoImg} alt="logo" />
 					<br />
 					<Title>STACK UNDERFLOW</Title>
-				</Link>
+				</LogoLink>
 				{!isLoginPage && (
 					<Buttons>
 						{isLoggedIn ? (
-							<Link to="/logout">
+							<LogoLink to="/logout">
 								<Button color={tokens.global.whiteColor.value}>
 									<Gradient>로그아웃</Gradient>
 								</Button>
-							</Link>
+							</LogoLink>
 						) : (
 							<>
 								<Link to="/login">
