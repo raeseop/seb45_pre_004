@@ -33,6 +33,7 @@ export const ColorGradBlue = styled.p`
   background: linear-gradient(to right top, #00e0ff, #006c7a);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 `;
 
 const Button = ({ color, text }) => {
