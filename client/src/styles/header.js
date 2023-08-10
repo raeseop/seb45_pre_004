@@ -1,13 +1,7 @@
 import { styled } from "styled-components";
 
-import backgroundImg from "../assets/images/headerImage.png";
-
 export const Background = styled.header`
-	background-image: url(${backgroundImg});
-	background-size: cover;
-	background-position: center;
 	width: 100%;
-	height: 425px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
