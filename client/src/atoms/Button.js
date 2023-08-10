@@ -15,6 +15,11 @@ export const RegularButtonDesign = styled.button`
 	background: ${(props) => props.color || `${tokens.global.mainColor.value}`};
 	width: 350px;
 	height: 70px;
+	&:hover {
+		cursor: pointer;
+		background-color: ${(props) =>
+			props.hover || `${tokens.global.dartColor.value}`};
+	}
 `;
 
 export const SmallCircleButtonDesign = styled(RegularButtonDesign)`
