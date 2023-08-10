@@ -29,12 +29,24 @@ export const SmallButtonDesign = styled(RegularButtonDesign)`
   height: 58px;
 `;
 
+export const ColorGradBlue = styled.p`
+  background: linear-gradient(to right top, #00e0ff, #006c7a);
+  color: transparent;
+  -webkit-background-clip: text;
+`;
+
 const Button = ({ color, text }) => {
   return (
     <div>
-      <RegularButtonDesign color={color}>{text}</RegularButtonDesign>
-      <SmallCircleButtonDesign>{text}</SmallCircleButtonDesign>
-      <SmallButtonDesign>{text}</SmallButtonDesign>
+      <RegularButtonDesign color={color}>
+        <ColorGradBlue>{text}</ColorGradBlue>
+      </RegularButtonDesign>
+      <SmallCircleButtonDesign>
+        <ColorGradBlue>{text}</ColorGradBlue>
+      </SmallCircleButtonDesign>
+      <SmallButtonDesign>
+        <ColorGradBlue>{text}</ColorGradBlue>
+      </SmallButtonDesign>
     </div>
   );
 };
