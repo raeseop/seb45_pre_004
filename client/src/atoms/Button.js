@@ -52,11 +52,11 @@ export const SmallButtonDesign = styled.button`
 
 const Button = ({ color, text }) => {
   return (
-    <>
+    <div>
       <RegularButtonDesign color={color}>{text}</RegularButtonDesign>
       <SmallCircleButtonDesign>{text}</SmallCircleButtonDesign>
       <SmallButtonDesign>{text}</SmallButtonDesign>
-    </>
+    </div>
   );
 };
 
