@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { RegularButtonDesign } from "../atoms/Button";
 import tokens from "../styles/tokens.json";
-import { LoginInputTopDesign } from "../atoms/Input";
+import { SignupInputDesign } from "../atoms/Input";
 
-const Input = styled(LoginInputTopDesign)`
+const Input = styled(SignupInputDesign)`
   padding: 1rem;
 `;
 
