@@ -8,6 +8,7 @@ import QnADetailPage from "./pages/QnADetailPage";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Navigator from "./components/Navigator";
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/write" element={<QnAWritePage />} />
 				<Route path="/detail" element={<QnADetailPage />} />
 			</Routes>
+			<Navigator />
 			<Footer />
 		</BrowserRouter>
 	);
