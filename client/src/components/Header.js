@@ -1,43 +1,33 @@
-import backgroundImg from "../assets/images/headerImage.png";
 import logoImg from "../assets/images/logoImage.png";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-const Background = styled.header`
-	background-image: url(${backgroundImg});
-	background-size: cover;
-	background-position: center;
+const LogoLink = styled(Link)`
+	padding: 20px;
+    text-decoration-line : none;
+    text-decoration : none;
 	width: 100%;
-	height: 425px;
+	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	color: white;
-	text-align: center;
-
-	a,
-	a:visited,
-	a:active {
-		outline: none;
-		text-decoration: none;
-	}
-`;
-
-const Title = styled.h1`
+	align-items: center;
+`
+const TitleLogoImg = styled.img`
+	width: 8vw;
+	max-width: 100px;
+`
+const TitleLogoText = styled.h1`
 	font-family: "Jolly Lodger";
-	font-size: 32px;
+	font-size: 1.3rem;
 	color: #0567c2;
 `;
 
 export default function Header() {
 	return (
-		<Background>
-			<Link to="/">
-				<img src={logoImg} alt="logo" />
-				<br />
-				<Title>STACK UNDERFLOW</Title>
-			</Link>
-		</Background>
+			<LogoLink to="/">
+				<TitleLogoImg src={logoImg} alt="logo" />
+				<TitleLogoText>STACK UNDERFLOW</TitleLogoText>
+			</LogoLink>
 	);
 }
