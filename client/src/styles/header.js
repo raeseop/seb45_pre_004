@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-import tokens from '../styles/tokens.json'
+import tokens from "../styles/tokens.json";
 
 const globalTokens = tokens.global;
 
@@ -28,16 +28,17 @@ export const Wrapper = styled.div`
 	border-radius: 20px;
 
 	position: relative;
+	margin-top: 20px;
 `;
 
 export const LogoLink = styled(Link)`
 	text-decoration: none;
 	color: ${globalTokens.blackColor.value};
-`
+`;
 export const LogoImg = styled.img`
 	margin-top: 10px;
 	max-width: 70px;
-`
+`;
 export const Title = styled.h1`
 	font-family: "Jolly Lodger";
 	font-size: 32px;

@@ -8,6 +8,7 @@ export const Wrapper = styled.li`
 	width: 921px;
 	height: 158px;
 	padding: 20px 10px;
+    margin: 15px;
 	align-items: flex-start;
 	gap: 22px;
 
