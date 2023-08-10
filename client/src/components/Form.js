@@ -1,64 +1,15 @@
 import React, { useState } from "react";
-import tokens from "../styles/tokens.json";
-import { styled } from "styled-components";
-import { RegularButtonDesign } from "../atoms/Button";
-
-const InputBox = styled.div`
-  background-color: ${tokens.global.pointColor.value};
-  padding: 10px;
-`;
-
-const InputContent = styled.div`
-  background-color: ${tokens.global.greyColor.value};
-  height: 100px;
-  padding: 10px;
-  height: 150px;
-`;
-
-const ButtonAndContent = styled.div`
-  width: 100%;
-  text-align: right;
-`;
-
-const QuestionP = styled.p`
-  font-size: ${tokens.global.bodyText.value}px;
-  margin: 10px;
-`;
-const QuestionHead = styled.h1`
-  font-size: ${tokens.global.bigHeading.value}px;
-  margin: 10px;
-  margin-top: 1rem;
-`;
-const TextArea = styled.textarea`
-  width: 100%;
-  resize: none;
-  height: 125px;
-`;
-
-const ButtonDesign = styled(RegularButtonDesign)`
-  margin-top: 1rem;
-  background-color: black;
-  &:hover {
-    background-color: red;
-  }
-`;
-
-const DisabledButton = styled(RegularButtonDesign)`
-  margin-top: 1rem;
-  background-color: ${tokens.global.greyColor.value};
-  &:hover {
-    background-color: ${tokens.global.greyColor.value};
-    cursor: default;
-  }
-  opacity: 0.8; /* 80% 불투명도 */
-`;
-
-const Warning = styled.p`
-  color: red;
-  font-size: ${tokens.global.bigHeading.value};
-  margin-top: 1rem;
-  font-weight: ${tokens.global.bold.value};
-`;
+import {
+  InputBox,
+  InputContent,
+  ButtonAndContent,
+  QuestionP,
+  QuestionHead,
+  TextArea,
+  ButtonDesign,
+  DisabledButton,
+  Warning,
+} from "../styles/form";
 
 const submitHandler = (e) => {
   e.preventDefault();
