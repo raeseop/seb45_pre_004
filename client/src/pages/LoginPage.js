@@ -20,10 +20,10 @@ const LoginPage = () => {
 		<LoginPageContainer>
 			<LoginContainer>
 				<LoginTitle>로그인</LoginTitle>
-				<LoginInputTopDesign type='text'/>
-				<LoginInputBottomDesign type='password'/>
+				<LoginInputTopDesign type='text' placeholder="아이디를 입력해 주세요."/>
+				<LoginInputBottomDesign type='password' placeholder="비밀번호를 입력해 주세요."/>
 				<LoginButton color={globalTokens.pointColor.value} onClick={handleLogin}>로그인</LoginButton>
-				<TextButtonDesign>회원가입</TextButtonDesign>
+				<TextButtonDesign to='/signup'>회원가입</TextButtonDesign>
 			</LoginContainer>
 		</LoginPageContainer>
 	);

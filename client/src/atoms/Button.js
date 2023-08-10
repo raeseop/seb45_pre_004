@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import tokens from "../styles/tokens.json";
+import { Link } from 'react-router-dom';
 
 export const RegularButtonDesign = styled.button`
   border-radius: ${tokens.global.regularRadius.value}px;
@@ -36,12 +37,18 @@ export const SmallButtonDesign = styled(RegularButtonDesign)`
 	font-size: ${tokens.global.smallHeading.value}px;
 `;
 
-export const TextButtonDesign = styled.button`
+export const TextButtonDesign = styled(Link)`
 	background-color: transparent;
 	border-style: none;
+	text-decoration: none;
+	color: ${tokens.global.blackColor.value};
 	padding: 10px 20px;
 	font-size: ${tokens.global.bodyText}px;
 	cursor: pointer;
+
+	&:hover {
+		color: ${tokens.global.lightGreyColor.value};
+	}
 `
 
 export const ColorGradBlue = styled.p`
