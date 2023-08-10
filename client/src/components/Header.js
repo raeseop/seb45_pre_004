@@ -1,8 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-
 import logoImg from "../assets/images/logoImage.png";
-
 import tokens from "../styles/tokens.json";
 import { SmallButtonDesign as Button } from "../atoms/Button";
 import { ColorGradBlue as Gradient } from "../atoms/Button";
@@ -12,7 +10,6 @@ export default function Header() {
 	const location = useLocation();
 	const isLoginPage =
 		location.pathname === "/login" || location.pathname === "/signup";
-
 	const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
 	return (
